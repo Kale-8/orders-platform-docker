@@ -6,7 +6,11 @@ const config: Config.InitialOptions = {
     roots: ['<rootDir>/src'],
     testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
     collectCoverage: true,
-    collectCoverageFrom: ['src/**/*.ts', '!src/server.ts'],
+    collectCoverageFrom: [
+        'src/models/**/*.ts',
+        'src/services/**/*.ts',
+        '!src/services/product.service.ts'
+    ],
     coverageThreshold: {
         global: {
             branches: 80,

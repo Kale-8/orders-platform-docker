@@ -21,5 +21,5 @@ test('create order and compute total', async () => {
     }]);
     const result = await orderService.getOrderWithTotal(order.id);
     expect(result).not.toBeNull();
-    expect(result?.total).toBeCloseTo(5.5 * 2 + 2.5);
+    expect(result?.total).toBeCloseTo(5.5 * 2 + 2.5, 2);
 });

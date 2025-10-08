@@ -17,8 +17,6 @@ class Product extends Model<ProductAttributes, ProductCreationAttributes> implem
     public name!: string;
     public price!: number;
     public category!: string;
-    public readonly createdAt?: Date;
-    public readonly updatedAt?: Date;
 }
 
 Product.init(
