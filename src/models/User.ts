@@ -17,8 +17,8 @@ class User extends Model<UserAttributes, UserCreationAttributes> implements User
     public name!: string;
     public email!: string;
     public role!: 'admin' | 'client';
-    public readonly createdAt!: Date;
-    public readonly updatedAt!: Date;
+    public readonly createdAt?: Date;
+    public readonly updatedAt?: Date;
 }
 
 User.init(

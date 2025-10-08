@@ -16,7 +16,7 @@ OrderProduct.init(
         quantity: {type: DataTypes.INTEGER, allowNull: false, defaultValue: 1},
         unitPrice: {type: DataTypes.DECIMAL(10, 2), allowNull: false}
     },
-    {sequelize, tableName: 'order_products', timestamps: false}
+    {sequelize, tableName: 'order_products'}
 );
 
 export default OrderProduct;

@@ -18,8 +18,8 @@ class Order extends Model<OrderAttributes, OrderCreationAttributes> implements O
     public date!: Date;
     public status!: 'pending' | 'preparing' | 'delivered';
     public userId!: number;
-    public readonly createdAt!: Date;
-    public readonly updatedAt!: Date;
+    public readonly createdAt?: Date;
+    public readonly updatedAt?: Date;
 }
 
 Order.init(
