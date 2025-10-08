@@ -2,6 +2,8 @@
 import {Model, DataTypes, Optional} from 'sequelize';
 import sequelize from '../config/database';
 import User from './User';
+import Product from './Product';
+import OrderProduct from './OrderProduct';
 
 interface OrderAttributes {
     id: number;
@@ -18,6 +20,7 @@ class Order extends Model<OrderAttributes, OrderCreationAttributes> implements O
     public date!: Date;
     public status!: 'pending' | 'preparing' | 'delivered';
     public userId!: number;
+    public readonly products?: (Product & { OrderProduct: OrderProduct })[];
 }
 
 Order.init(
