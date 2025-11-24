@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: fastfood_app
+    env_file:
+      - .env                # Carga las variables de entorno (incluye tus credenciales de Supabase)
+    ports:
+      - '3000:3000'         # Expone tu aplicación en el puerto 3000
+    environment:
+      NODE_ENV: production  # Define el entorno de ejecución
+    restart: unless-stopped # Reinicia el contenedor automáticamente si se detiene
